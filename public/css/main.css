@@ -1,0 +1,123 @@
+/*
+CSS style for my simple chatapllication built with node.js, socket.io and template engine
+
+Colors:
+Body:           #099BFF; rgb(9, 155, 255) color: blue;
+Usernamesubmit: #4CAF50;  rgb(76, 175, 80) color: green;
+Submitbutton:   #FFA21A; rgb(255, 162, 26) color: yellow;
+
+*/
+
+*{ /*Fixes the page margins*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font: 13px Helvetica, Arial;
+  background: #099BFF;
+}
+h1 {
+  font-size: 32px;
+  text-align: center;
+}
+p{
+  font-size: 16px;
+}
+/*Input username*/
+#overlay{ /*The overlay section seen when page is first loaded*/
+  background-color: rgba(0,0,0,0.8);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#username{ /*The white box where the user fills in the username*/
+  background-color: #fff;
+  height: 200px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#username form {
+  position: relative;
+  margin: 10px;
+}
+#user { /*Inputfield for username*/
+  padding: 5px;
+  border: none;
+  border-bottom: 2px solid;
+  text-align: center;
+  font-size: 16px;
+}
+#namesubmit { /*Button for submitting username*/
+  position: relative;
+  border: none;
+  border-radius: 8px;
+  background: #4CAF50;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 10px 2px;
+  cursor: pointer;
+}
+/*Chat*/
+#header{ /*Section for the headline*/
+  width: 100%;
+  height: 40px;
+  color: #fff;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form{
+  padding: 3px;
+  position: absolute;
+  right: 0;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+#messageinput{ /*Inputfield for chatmessage*/
+  border: 0;
+  border-radius: 8px;
+  padding: 20px;
+  width: 40%;
+  margin-right: .5%;
+  position: fixed;
+  top: 40%;
+  opacity: 0;
+}
+#messagesubmit{ /*Submitbutton for chatmessage*/
+  width: 40%;
+  background: #FFA21A;
+  border-radius: 8px;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  position: fixed;
+  top: 48%;
+  opacity: 0;
+}
+#messages{ /*Wrapper for the chatmessages*/
+  list-style-type: none;
+  margin: 0;
+  padding: 40px;
+  width: 50%;
+}
+#messages li{ /*List each chatentry*/
+  padding: 5px 10px;
+  font-size: 16px;
+}
+#messages li:nth-child(even) { /*Gives all the even chatentrys a white background*/
+  background: #fff;
+}
+#messages li:nth-child(odd) { /*Gives all the odd chatentrys a grey background*/
+  background: #eee;
+}

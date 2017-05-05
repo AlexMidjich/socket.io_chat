@@ -1,0 +1,20 @@
+html(lang='en')
+  include includes/head.pug
+  body
+    div(id="overlay")
+      div(id="username")
+        form
+          input(id='user' placeholder="Användarnamn" autocomplete='off')
+          button(id="namesubmit") Submit    
+    
+    div(id='header')
+        h1 Socketchat
+          p Chata med Socketchats bot
+    ul(id='messages')
+    form(id='chatform' action="")
+      input(id="messageinput" autocomplete="off" placeholder="Skriv ditt meddelande här...")
+      button(id='messagesubmit') Skicka meddelande!
+            
+    
+  include includes/scripts.pug  
+  
